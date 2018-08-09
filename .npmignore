@@ -1,0 +1,4 @@
+.eslintrc.yml
+.travis.yml
+coverage
+test.js
