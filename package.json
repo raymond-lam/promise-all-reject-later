@@ -1,10 +1,11 @@
 {
   "name": "promise-all-reject-later",
   "version": "1.0.0",
-  "description": "A drop-in replacement for Promise.all which does not fail-fast.",
+  "description": "A drop-in replacement for Promise.all() which does not fail-fast.",
   "main": "index.js",
   "keywords": [
     "Promise.all",
+    "Promise.all()",
     "promise",
     "all",
     "promise all",
