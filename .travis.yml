@@ -1,5 +1,8 @@
 language: node_js
 node_js: node
+install: npm install
+before_script: greenkeeper-lockfile-update
+after_script: greenkeeper-lockfile-upload
 deploy:
   provider: npm
   email: ray@lam-ray.com
@@ -8,3 +11,6 @@ deploy:
   on:
     tags: true
     repo: raymond-lam/promise-all-reject-later
+env:
+  global:
+    secure: ZJqHYw3RBNztPga3hJ5W6Vx8vtYZyOfyryRfqAMKv2L/4aWOU3rBrssqMVnO6vLB49QQKiHd+uMlY8RqPXbVc+t5ufs+lWDWXu0sEbRCQI8zRHQAc07jQrZoH41dGILOb2FztJFvYZkdplyagwk62OKNGQ8fKfW3M/NcLbSo8mUjTUFlTrX1Cb8oZ+dVKR9nnEg99M7UX46JWHia8rUFeZxPHcbCdbq9WD51XXiYo+ARXTNeOSXRd3urEgVprh3zrQLQqr/eiu0oRrAnpme1EytMyCWBNS0fk3m0fDd2cIpgpg9eryJSzUP92oHFKtRV/mLys4XxDogsY7SrH5gt2hD2H8a5NrEQ15CVCSnexOyFGATPUPW2hsSSUhI6NHoQ18U63Dma7XA9RQIOYeIN8gH9xhEGLiyYO9kQf1EgNwQUqixSb3YJEhDrrJyNS9qNzmsBefnzwfr7D073QkUGgxdbh/fp46b4CrMBYKUyfmwzmBo2amEIMDMK5fbCi7HZSd+2WBJs8uBInWLliRu5VIAIS07JwlXUm1i1bMuYlu5hdTiDBpB7W430QkwFT2evHXoRWRq8G7Lf3AW/1NFvJX2YFiV3UOurxdc3NA2k+MePQoPUvobUmIaG2uiSkAv8VKG2C/vXXCI3DHwbkwuN8DggIO9FeWPfJwMPe16nT34=
