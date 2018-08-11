@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/raymond-lam/promise-all-reject-later.svg?branch=master)](https://travis-ci.org/raymond-lam/promise-all-reject-later)
+
 # promise-all-reject-later
 
 A drop-in replacement for `Promise.all()` which does not fail-fast.

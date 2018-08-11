@@ -1,0 +1,10 @@
+language: node_js
+node_js: node
+deploy:
+  provider: npm
+  email: ray@lam-ray.com
+  api_key:
+    secure: hP8ew0cmeXc4lnhn0E4yUL3DpeTPes8hmXtbwknV8GVUoXI5fSY1JlxaYDbL0BxiaMMk7Bnzt5WFkTff26S1ecqYJbp8cnSKz0SL5cHqyAVJ7gxccNekEDVRfKpFA+FFIOicjcYuWWscS8ME4+VN8Hvc4tJe96NTZqT8DB3ucEfuDI6I94GldSgBEavCKgoxx3jtPQcphMxXTlcdZqMSMzEbF0cHMtBkkDmAz7Vq33Qe2zNdsOGg3R44pJ4aiNrRo3pmeKmPEN5KO96xwHT0qMtG+xkCjUaow2EM5aXckGhC0nficSRM3NmGtK5KQw3QXaPWCZZh0DAl1OMyhyCRl2Bmp/zVImxQ8TMcrQKdcnDpKjdbSDDceqoSSRftuE+iNkWk9Ei/ESrbUM5avURxxvkzoi1tg7uU+weaHXwf6Vxa4aRLZXiEI0nJiulF8/qtrbY3GE0Q3TnZzfknZ6Pt9wXTST12y5/s7qIf3Ru6hNX7Ofgt8UnXx/8Ud5WsLz9PNrCyVFtrVnt98P0Pno3iWffN7qfXjXWXdipeVSiHDsSEGIuv35Vhem9pgAMrBEFwahSSeuaLyLKwB8pO7VgT5hDsudsiqUlu9j25NCBdIZoBUMPHB/PbelWnm802t5s5vJqSEAFlxpzCXTvjV7g8AgSgZxXHGEKwLuBaQMq2fc8=
+  on:
+    tags: true
+    repo: raymond-lam/promise-all-reject-later
