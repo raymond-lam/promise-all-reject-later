@@ -1,8 +1,8 @@
 'use strict';
 
-//     promise-all-reject-later 1.0.0
+//     promise-all-reject-later 1.0.1
 //     https://github.com/raymond-lam/promise-all-reject-later
-//     (c) 2018 Raymond Lam
+//     (c) 2018-2019 Raymond Lam
 //
 //     Author: Raymond Lam (ray@lam-ray.com)
 //
