@@ -57,7 +57,7 @@ rules:
   func-names: error
   func-style:
     - error
-    - declaration
+    - expression
   function-paren-newline: 
     - error
     - consistent
@@ -133,6 +133,7 @@ rules:
     - error
     - all
     - nestedBinaryExpressions: false
+      returnAssign: false
   no-floating-decimal: error
   no-implicit-coercion: error
   no-implicit-globals: error

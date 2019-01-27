@@ -17,43 +17,29 @@
 // Promise.resolve(). Unlike with Promise.all(), however, the returned Promise
 // rejects with the reason of the first promise that rejects after all of the
 // promises have either resolved or rejected, rather than immediately.
-module.exports = async promises => {
-  let exceptionWasCaught = false;
-  let exception;
-  const values = [];
-
-  // As in Promise.all(), throws an exception if promises is not iterable.
-  for (const promise of promises) {
-    try {
-      // If promise rejects or has already rejected, the rejection reason
-      // becomes the exception which is caught here. This will cause values not
-      // to contain enough elements, which is okay since an values is never
-      // returned if any of the promises rejects anyhow. If promise resolves
-      // or has already resolved, the resolve value is pushed onto the values
-      // array in the correct ordering. The promises resolve or reject on their
-      // own asynchronously -- the await-in-a-loop does not in any way serialize
-      // or synchronize their execution. The await-in-a-loop's simply puts the
-      // resolution values of the promises into the values array in the correct
-      // order.
-      values.push(await promise);
+module.exports = promises => {
+  let error;
+  const handler = reason => (error = error || reason);
+  const promisesWithHandler = [];
+  try {
+    for (const p of promises) {
+      promisesWithHandler.push(p.then && p.catch ? p.catch(handler) : p);
     }
-    catch (e) {
-      // Use a separate boolean to indicate whether an exception hass been
-      // thrown rather than checking for the defined-ness of exception, because
-      // the thrown exception could theoretically be undefined.
-      if (!exceptionWasCaught) {
-        exceptionWasCaught = true;
 
-        // We only need to track the first exception that is thrown.
-        exception = e;
+    // All the promises have a catch handler, so Promise.all() will not reject
+    // prematurely if any of the underlying promises reject. The catch handler
+    // will save the first error that happens, and the then callback will
+    // execute after all the underlying promises have either resolved or
+    // rejected, and check if any of them have rejected, before causing the
+    // aggregate promise to resolve or reject accordingly.
+    return Promise.all(promisesWithHandler).then(
+      values => {
+        if (error) throw error;
+        else return values;
       }
-    }
+    );
   }
-
-  // If there was an exception, re-throw it only after all the promises have
-  // resolved or rejected. async functions always return a Promise, and throwing
-  // an exception is equivalent to rejecting, while returning is equivalent to
-  // resolving.
-  if (exceptionWasCaught) throw exception;
-  else return values;
+  catch (e) {
+    return Promise.reject(e);
+  }
 };
