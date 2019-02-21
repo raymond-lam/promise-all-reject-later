@@ -23,7 +23,7 @@
   ],
   "scripts": {
     "clean": "rimraf coverage",
-    "test": "eslint --ignore-path=.gitignore . && cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha"
+    "test": "eslint --ignore-path=.gitignore . && cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha test.js"
   },
   "author": {
     "name": "Raymond Lam",
@@ -66,6 +66,6 @@
     "functions": 100,
     "branches": 100,
     "check-coverage": true,
-    "temp-directory": "./coverage/.nyc_output"
+    "temp-dir": "./coverage/.nyc_output"
   }
 }
