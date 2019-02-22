@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/raymond-lam/promise-all-reject-later.svg?branch=master)](https://travis-ci.org/raymond-lam/promise-all-reject-later) [![Greenkeeper badge](https://badges.greenkeeper.io/raymond-lam/promise-all-reject-later.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.com/raymond-lam/promise-all-reject-later.svg?branch=master)](https://travis-ci.org/raymond-lam/promise-all-reject-later) [![Greenkeeper badge](https://badges.greenkeeper.io/raymond-lam/promise-all-reject-later.svg)](https://greenkeeper.io/)
 
 # promise-all-reject-later
 
