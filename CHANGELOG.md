@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.2] - 2019-02-22
+
+### Fixed
+
+- update dev dependencies due to security vulnerabilties in lodash 4.17.11
+
+### Changed
+
+- migrate build badge to travis-ci.com
+
 ## [1.0.1] - 2019-01-26
 
 ### Fixed
