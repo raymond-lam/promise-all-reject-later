@@ -1,6 +1,8 @@
-[![Build Status](https://travis-ci.com/raymond-lam/promise-all-reject-later.svg?branch=master)](https://travis-ci.com/raymond-lam/promise-all-reject-later) [![Greenkeeper badge](https://badges.greenkeeper.io/raymond-lam/promise-all-reject-later.svg)](https://greenkeeper.io/)
+promise-all-reject-later
+========================
 
-# promise-all-reject-later
+[![Build Status](https://travis-ci.com/raymond-lam/promise-all-reject-later.svg?branch=master)](https://travis-ci.com/raymond-lam/promise-all-reject-later)
+[![Greenkeeper badge](https://badges.greenkeeper.io/raymond-lam/promise-all-reject-later.svg)](https://greenkeeper.io/)
 
 A drop-in replacement for `Promise.all()` which does not fail-fast.
 
