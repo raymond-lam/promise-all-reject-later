@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.0.6] - 2019-10-27
+
+### Changed
+
+- Updated dev dependencies
+
+### Fixed
+
+- Fixed failing lint due to updated dev dependencies
+
+## [1.0.5] - 2019-09-02
+
+### Changed
+
+- Updated dev dependencies
+
 ## [1.0.4] - 2019-09-02
 
 ### Changed
