@@ -36,7 +36,7 @@ module.exports = promises => {
       values => {
         if (error) throw error;
         else return values;
-      }
+      },
     );
   }
   catch (e) {

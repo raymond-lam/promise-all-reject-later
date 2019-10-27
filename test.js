@@ -16,13 +16,13 @@ describe('promise-all-reject-later', () => { // eslint-disable-line no-undef
         *[Symbol.iterator]() {
           const promises = [
             new Promise(
-              resolve => setTimeout(() => resolve('p0'), STANDARD_WAIT * 3)
+              resolve => setTimeout(() => resolve('p0'), STANDARD_WAIT * 3),
             ),
             new Promise(
-              resolve => setTimeout(() => resolve('p1'), STANDARD_WAIT)
+              resolve => setTimeout(() => resolve('p1'), STANDARD_WAIT),
             ),
             new Promise(
-              resolve => setTimeout(() => resolve('p2'), STANDARD_WAIT * 2)
+              resolve => setTimeout(() => resolve('p2'), STANDARD_WAIT * 2),
             ),
           ];
 
@@ -41,7 +41,7 @@ describe('promise-all-reject-later', () => { // eslint-disable-line no-undef
         'p1',
         'p2',
       ]);
-    }
+    },
   );
 
   it( // eslint-disable-line no-undef
@@ -59,7 +59,7 @@ describe('promise-all-reject-later', () => { // eslint-disable-line no-undef
       expect(resolvedValues).to.be.an.instanceof(Array);
 
       expect(resolvedValues).to.deep.equal([]);
-    }
+    },
   );
 
   it( // eslint-disable-line no-undef
@@ -70,7 +70,7 @@ describe('promise-all-reject-later', () => { // eslint-disable-line no-undef
         *[Symbol.iterator]() {
           const promises = [
             new Promise(
-              resolve => setTimeout(() => resolve('p0'), STANDARD_WAIT * 3)
+              resolve => setTimeout(() => resolve('p0'), STANDARD_WAIT * 3),
             ),
             {
               then(cb) {
@@ -78,7 +78,7 @@ describe('promise-all-reject-later', () => { // eslint-disable-line no-undef
               },
             },
             new Promise(
-              resolve => setTimeout(() => resolve('p2'), STANDARD_WAIT * 2)
+              resolve => setTimeout(() => resolve('p2'), STANDARD_WAIT * 2),
             ),
           ];
 
@@ -97,7 +97,7 @@ describe('promise-all-reject-later', () => { // eslint-disable-line no-undef
         'p1',
         'p2',
       ]);
-    }
+    },
   );
 
   it( // eslint-disable-line no-undef
@@ -111,11 +111,11 @@ describe('promise-all-reject-later', () => { // eslint-disable-line no-undef
         *[Symbol.iterator]() {
           const elements = [
             new Promise(
-              resolve => setTimeout(() => resolve('p0'), STANDARD_WAIT * 2)
+              resolve => setTimeout(() => resolve('p0'), STANDARD_WAIT * 2),
             ),
             value,
             new Promise(
-              resolve => setTimeout(() => resolve('p2'), STANDARD_WAIT)
+              resolve => setTimeout(() => resolve('p2'), STANDARD_WAIT),
             ),
           ];
 
@@ -130,7 +130,7 @@ describe('promise-all-reject-later', () => { // eslint-disable-line no-undef
       ]);
 
       expect(result[1]).to.equal(value);
-    }
+    },
   );
 
   it( // eslint-disable-line no-undef
@@ -146,13 +146,13 @@ describe('promise-all-reject-later', () => { // eslint-disable-line no-undef
         resolve => setTimeout(() => {
           sideEffect0Occurred = true;
           resolve();
-        }, STANDARD_WAIT)
+        }, STANDARD_WAIT),
       );
 
       const promise1 = new Promise(
         (resolve, reject) => setTimeout(
-          () => reject(new Error('p1')), STANDARD_WAIT * 2
-        )
+          () => reject(new Error('p1')), STANDARD_WAIT * 2,
+        ),
       );
 
       let sideEffect2Occurred;
@@ -160,7 +160,7 @@ describe('promise-all-reject-later', () => { // eslint-disable-line no-undef
         resolve => setTimeout(() => {
           sideEffect2Occurred = true;
           resolve();
-        }, STANDARD_WAIT * 3)
+        }, STANDARD_WAIT * 3),
       );
 
       let sideEffect3Occurred;
@@ -168,7 +168,7 @@ describe('promise-all-reject-later', () => { // eslint-disable-line no-undef
         (resolve, reject) => setTimeout(() => {
           sideEffect3Occurred = true;
           reject(new Error('p3'));
-        }, STANDARD_WAIT * 4)
+        }, STANDARD_WAIT * 4),
       );
 
       let reason;
@@ -183,7 +183,7 @@ describe('promise-all-reject-later', () => { // eslint-disable-line no-undef
       expect(sideEffect0Occurred).to.equal(true);
       expect(sideEffect2Occurred).to.equal(true);
       expect(sideEffect3Occurred).to.equal(true);
-    }
+    },
   );
 
   // eslint-disable-next-line no-undef
