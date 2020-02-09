@@ -6,6 +6,7 @@ after_success: coveralls < coverage/lcov.info
 after_script: greenkeeper-lockfile-upload
 deploy:
   provider: npm
+  edge: true
   email: ray@lam-ray.com
   api_key:
     secure: gp0lrkJT3n8et+8BpIKNlVzBpRTjfFeS9UAj6n8JeH//nvr92kDoiC/mvMgnbaSZblxe1pQu1n0dszzkcxsInmpkecTD1/5N2oPCvSRZjXW/U8lJmyuMn4jeyCZ6DNsh3Y4S9LW4jgw6lNpTONXfZiZWIciu+7igD7O53KL+VdZxOsiwXTfIvnFaW02l5h2LHbFcunTT3taY+yE5aZ1QPFwXj9IcorL6FpiqZ0fTPJDolu9MeoFTXCXuROQwRIRk7kAGXHo99CeGCV5PMK9tGfiE3OTF0QwpeIbIxHhC92I4HZ5HTBpz6OpXPccuv1flCfrGNkcE0K8Qoxq9gwnQgQXE+8wOkJH5ACmlABcLggz1RciAxNYFiRIa+g54Kr7RhgT/xB+iwFgZY2uOHY6WgxAo4OWfcw6Yc4mNJu4af/QqULmfzprOtMfscmbuQfcoXaRLLm58hKYmm0UL+RnLgdlzRuBunHKzkUJKUaEmIOQeuFCFURNzVh4jDGnkxwpA8hsM5yJA//0DjlGzqnQ2+EPArfygNCSkZEVAPpwdqWvlnjhW2vpF+qGb1QLhD/L/U3DK0ISLMI0qPZQkPEngoqIQicYHd6iy+dq6747NARuNJmLM5rTCN74ZONiE6vtVTVM3v15aOsZnny/aqEjuGPlpdmZo+XW8ohDU0wyMk+4=
