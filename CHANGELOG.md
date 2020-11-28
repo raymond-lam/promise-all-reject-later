@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.12] - 2020-11-28
+
+### Changed
+
+- Removed references to Greenkeeper.io
+
+### Fixed
+
+- Updated dev dependency to address security vulnerability
+
 ## [1.0.11] - 2020-07-18
 
 ### Fixed
