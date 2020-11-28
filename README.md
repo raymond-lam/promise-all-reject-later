@@ -1,9 +1,9 @@
 promise-all-reject-later
 ========================
 
+[![npm](https://img.shields.io/npm/v/promise-all-reject-later)](https://www.npmjs.com/package/promise-all-reject-later)
 [![Build Status](https://travis-ci.com/raymond-lam/promise-all-reject-later.svg?branch=master)](https://travis-ci.com/raymond-lam/promise-all-reject-later)
 [![Coverage Status](https://coveralls.io/repos/github/raymond-lam/promise-all-reject-later/badge.svg?branch=master)](https://coveralls.io/github/raymond-lam/promise-all-reject-later?branch=master)
-[![Greenkeeper badge](https://badges.greenkeeper.io/raymond-lam/promise-all-reject-later.svg)](https://greenkeeper.io/)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
 A drop-in replacement for `Promise.all()` which does not fail-fast.
