@@ -2,7 +2,7 @@ promise-all-reject-later
 ========================
 
 [![npm](https://img.shields.io/npm/v/promise-all-reject-later)](https://www.npmjs.com/package/promise-all-reject-later)
-[![Build Status](https://travis-ci.com/raymond-lam/promise-all-reject-later.svg?branch=master)](https://travis-ci.com/raymond-lam/promise-all-reject-later)
+[![CI](https://github.com/raymond-lam/promise-all-reject-later/workflows/CI/badge.svg?branch=master)](https://github.com/raymond-lam/promise-all-reject-later/actions)
 [![Coverage Status](https://coveralls.io/repos/github/raymond-lam/promise-all-reject-later/badge.svg?branch=master)](https://coveralls.io/github/raymond-lam/promise-all-reject-later?branch=master)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
